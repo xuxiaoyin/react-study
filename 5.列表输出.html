@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/react.development.js"></script>
+  <script src="js/react-dom.development.js"></script>
+  <script src="js/babel.min.js"></script>
+</head>
+<div id="app"></div>
+<body>
+<script type="text/babel">
+  var users = ['张三', '李四', '王五'];
+  var obj = {left: 100, right: 200}
+  ReactDOM.render(
+    <div>
+      <ul>
+        {
+          users.map( (user, index) => {
+            return <li key={index}>{user}</li>
+          })
+        }
+      </ul>
+
+      <ul>
+        {
+          Object.keys(obj).map( key => {
+            return <li key={key}>{key}
+            -{obj[key]}</li>
+          })
+        }
+      </ul>
+    </div>,
+    document.getElementById('app')
+  )
+</script>
+</body>
+</html>
