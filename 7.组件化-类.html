@@ -15,15 +15,12 @@
 <script type="text/babel">
   var users = ['张三', '李四', '王五'];
   var users2 = ['张四', '李五', '王三'];
-  // function List(data) {
-  //   return data.map( (item, index) => {
-  //     return <li key={index}>{item}</li>
-  //   })
-  // }
-  function List(props) {
-    return props.data.map( (item, index) => {
-      return <li key={index}>{item}</li>
-    })
+  class List extends React.Component {
+    render() {
+      return this.props.data.map( (item, index) => {
+        return <li key={index}>{item}</li>
+      })
+    }
   }
   ReactDOM.render(
     <div>
