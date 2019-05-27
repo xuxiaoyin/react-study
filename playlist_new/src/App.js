@@ -3,12 +3,16 @@ import React from 'react';
 import './App.css';
 import JsxTest from './JsxTest'
 import CompType from './CompType'
+import StateTest from './StateTest'
+import CartSample from './CartSample'
 
 function App() {
   return (
     <div className="App">
       {/* <JsxTest/> */}
-      {<CompType/>}
+      {/* {<CompType/>} */}
+      {/* {<StateTest/>} */}
+      {<CartSample/>}
     </div>
   );
 }
